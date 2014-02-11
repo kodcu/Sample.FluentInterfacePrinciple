@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sample0;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,14 @@ namespace Sample.FluentInterfacePrinciple
     {
         static void Main(string[] args)
         {
-
+            // sample 0
+            Person v = FluentPersonFactory
+                .Init()
+                .GiveAColor("")
+                .GiveAGravatar("")
+                .GiveANickName("")
+                .SetForce(20)
+                .TakeAHero();
         }
     }
 }
