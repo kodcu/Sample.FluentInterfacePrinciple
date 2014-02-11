@@ -1,4 +1,5 @@
 ﻿using Sample0;
+using Sample1;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,6 +20,18 @@ namespace Sample.FluentInterfacePrinciple
                 .GiveANickName("")
                 .SetForce(20)
                 .TakeAHero();
+
+            // sample 1
+            //var emre = FluentFactory<Player>
+            //    .Initialize(new Player())
+            //    .GiveAValue("LastLevel", 12)
+            //    .GiveAValue("NickName", "CoolBoy")
+            //    .Take();
+
+            var burko = FluentFactory<Player>
+                .Initialize(new Player())
+                .GiveAValue(x => x.NickName, "Emre")
+                .GiveAValue(d => d.LastLevel, 12);
         }
     }
 }

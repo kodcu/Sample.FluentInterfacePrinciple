@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C9282069-F40D-4E11-849A-154295ED8CDD}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{C6E8284A-EB8C-4AAD-9FAB-6168F1DD397A}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Sample.FluentInterfacePrinciple</RootNamespace>
-    <AssemblyName>Sample.FluentInterfacePrinciple</AssemblyName>
+    <RootNamespace>Sample1</RootNamespace>
+    <AssemblyName>Sample1</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -41,21 +39,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="FluentFactory.cs" />
+    <Compile Include="Factory.cs" />
+    <Compile Include="IFactory.cs" />
+    <Compile Include="Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Sample0\Sample0.csproj">
-      <Project>{6949112d-bf4e-4e86-bcd5-de6471c7d031}</Project>
-      <Name>Sample0</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Sample1\Sample1.csproj">
-      <Project>{c6e8284a-eb8c-4aad-9fab-6168f1dd397a}</Project>
-      <Name>Sample1</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
