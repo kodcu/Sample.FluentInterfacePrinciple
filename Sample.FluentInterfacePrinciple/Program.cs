@@ -1,5 +1,6 @@
 ﻿using Sample0;
 using Sample1;
+using Sample2;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,6 +33,13 @@ namespace Sample.FluentInterfacePrinciple
                 .Initialize(new Player())
                 .GiveAValue(x => x.NickName, "Emre")
                 .GiveAValue(d => d.LastLevel, 12);
+
+            // sample 2
+            Car c = new Car()
+               .SetName("")
+               .SetModel("")
+               .SetPlate("")
+               .SetPower(12);
         }
     }
 }
