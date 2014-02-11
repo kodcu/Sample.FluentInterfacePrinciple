@@ -1,6 +1,7 @@
 ﻿using Sample0;
 using Sample1;
 using Sample2;
+using Sample3;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +15,7 @@ namespace Sample.FluentInterfacePrinciple
         static void Main(string[] args)
         {
             // sample 0
-            Person v = FluentPersonFactory
+            Sample0.Person v = FluentPersonFactory
                 .Init()
                 .GiveAColor("")
                 .GiveAGravatar("")
@@ -40,6 +41,12 @@ namespace Sample.FluentInterfacePrinciple
                .SetModel("")
                .SetPlate("")
                .SetPower(12);
+
+            // sample 3
+            var personals = new PersonFinder()
+                           .FirstName("Emre")
+                           .LastName("Keskin")
+                           .Find();
         }
     }
 }
