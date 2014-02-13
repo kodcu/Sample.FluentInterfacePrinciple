@@ -2,6 +2,7 @@
 using Sample1;
 using Sample2;
 using Sample3;
+using Sample4;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -47,6 +48,14 @@ namespace Sample.FluentInterfacePrinciple
                            .FirstName("Emre")
                            .LastName("Keskin")
                            .Find();
+
+            // sample 4
+            Vehicle vh = new Vehicle() { Plate = "" };
+
+            var militaryOpr = new MilitaryVehicleOperation()
+                            .Add(new Vehicle())
+                            .Add(new Vehicle() { SerialNo = "", Plate = "64-MIT-265" })
+                            .Remove(vh);
         }
     }
 }
