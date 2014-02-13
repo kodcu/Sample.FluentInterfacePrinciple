@@ -3,6 +3,7 @@ using Sample1;
 using Sample2;
 using Sample3;
 using Sample4;
+using Sample5;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -56,6 +57,15 @@ namespace Sample.FluentInterfacePrinciple
                             .Add(new Vehicle())
                             .Add(new Vehicle() { SerialNo = "", Plate = "64-MIT-265" })
                             .Remove(vh);
+
+            // sample 5
+            var account = new Account()
+                            .Create()
+                            .SetAccountType(14)
+                            .SetAccountNumber(12345)
+                            .SetAccountSuffix(354)
+                            .SetCustomerName("yunus emre");
+                                
         }
     }
 }
